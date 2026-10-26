@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordly</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Wordly</h1>
+    </header>
+
+    <main>
+      <form id="search-form">
+        <label for="word-input">Search for a word</label>
+        <div class="search-row">
+          <input
+            type="text"
+            id="word-input"
+            placeholder="place word to search"
+          />
+          <button type="submit" aria-label="Search word">Search</button>
+        </div>
+      </form>
+
+      <p id="message" role="alert"></p>
+
+      <section
+        id="result"
+        aria-live="polite"
+        aria-label="Search result"
+      ></section>
+
+      <section id="favorites-section" aria-label="Saved words">
+        <h2>Saved words</h2>
+        <ul id="favorites-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

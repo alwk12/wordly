@@ -1,0 +1,138 @@
+body {
+  --background: #f4f6fb;
+  --card: #ffffff;
+  --text: #222222;
+  --accent: #16dd26;
+  --saved: #f5e483;
+
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color:black;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+body.dark {
+  --background: #14171f;
+  --card: #1f2430;
+  --text: #f0f0f0;
+  --accent: #8f1414;
+  --saved: #4a4320;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #16dd26;
+  color: white;
+}
+
+body.dark header {
+  background-color: #208346;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+#word-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid green;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+header button {
+  background-color: white;
+  color: #222222;
+}
+
+#message {
+  color: #d32f2f;
+  min-height: 20px;
+}
+
+.word-card {
+  background-color: var(--card);
+  padding: 15px 20px;
+  border-radius: 8px;
+  border-left: 6px solid green;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.word-card.saved {
+  background-color: green;
+  border-left-color: yellow;
+}
+
+.word-card h2 {
+  margin-bottom: 5px;
+}
+
+.part-of-speech {
+  font-style: italic;
+  color: black;
+  font-weight: bold;
+}
+
+.example {
+  color: gray;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#favorites-list {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#favorites-list button {
+  background-color: var(--card);
+  color: black;
+  border: 1px solid green;
+}
+
+@media (max-width: 480px) {
+  .search-row {
+    flex-direction: column;
+  }
+}
